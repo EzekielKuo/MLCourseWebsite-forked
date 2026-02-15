@@ -48,10 +48,10 @@ export default function LessonDetailPage({ params }: LessonDetailPageProps) {
             </Panel>
 
             {/* Resize Handle */}
-            <PanelResizeHandle className="w-2 bg-gray-200 hover:bg-gray-300 transition-colors cursor-col-resize" />
+            <PanelResizeHandle className="w-2 bg-transparent hover:bg-gray-300 transition-colors cursor-col-resize" />
 
             {/* Chat Panel - 30% */}
-            <Panel defaultSize={30} minSize={20} className="pl-4">
+            <Panel defaultSize={30} minSize={20} className="">
               <div className="h-full">
                 <ChatPanel courseId={courseId} currentVideoTime={currentVideoTime} />
               </div>
