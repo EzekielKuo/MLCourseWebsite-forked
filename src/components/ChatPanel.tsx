@@ -119,8 +119,8 @@ export default function ChatPanel({ courseId, currentVideoTime }: ChatPanelProps
                 )}
               </div>
             ) : (
-              <div className="max-w-[80%] rounded-lg p-3 bg-blue-500 text-white">
-                <p className="whitespace-pre-wrap">{message.content}</p>
+              <div className="max-w-[80%] rounded-lg p-3 bg-gray-100 text-white">
+                <p className="whitespace-pre-wrap text-gray-600">{message.content}</p>
                 {message.videoTimestamp && (
                   <div className="mt-2">
                     <span className="text-xs px-1.5 py-0.5 bg-white/20 rounded">
@@ -136,7 +136,7 @@ export default function ChatPanel({ courseId, currentVideoTime }: ChatPanelProps
       </div>
 
       <div className="px-4 pb-4 flex-shrink-0">
-        <div className="border border-gray-200 rounded-md p-3 space-y-2">
+        <div className="border border-gray-200 rounded-xl p-3 space-y-2">
           <div className="flex items-center space-x-2">
             <button
               onClick={insertTimestamp}
@@ -159,9 +159,22 @@ export default function ChatPanel({ courseId, currentVideoTime }: ChatPanelProps
             />
             <button
               onClick={handleSend}
-              className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+              className="px-4 py-2 bg-gray-100 text-gray-600 rounded-full hover:bg-gray-300 transition-colors flex items-center justify-center"
             >
-              送出
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-5 h-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
+                />
+              </svg>
             </button>
           </div>
         </div>
